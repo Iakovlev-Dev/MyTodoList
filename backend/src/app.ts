@@ -1,12 +1,12 @@
 import express, {Response, Request, NextFunction} from "express"
 import 'dotenv/config'
-import todosRoutes from './routes/todoList'
+import todosRoutes from './routes/todoList_routes'
 import morgan from 'morgan'
 import createHttpError, {isHttpError} from "http-errors";
 
-const app = express()
+const app = express() //Подключаем фреймворк express
 
-app.use(express.json())
+app.use(express.json())//Разбирает входящие данные на JSON объекты
 
 app.use(morgan('dev'))
 
