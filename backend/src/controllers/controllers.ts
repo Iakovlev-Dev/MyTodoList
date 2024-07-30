@@ -58,7 +58,6 @@ export const updateTodo:RequestHandler<UpdateParams, unknown, UpdateTodoBody, un
         if(!newText) {
             throw createHttpError(400, "Todo must have text!")
         }
-
         const todo = await todoModel.findById(todoId).exec()
 
         if(!todo) {
