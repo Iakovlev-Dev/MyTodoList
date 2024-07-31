@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="365def43-c1c7-40fe-806b-50bbbe702811" name="Changes" comment="PATCH and DELETE v 1.1" />
+    <list default="true" id="365def43-c1c7-40fe-806b-50bbbe702811" name="Changes" comment="Connect to backend from frontend">
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/app/App.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/models/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/models/model-todo/model-todo.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,6 +65,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Igor Iakovlev\WebstormProjects\MyTodoList\frontend\src\components\app" />
       <recent name="C:\Users\Igor Iakovlev\WebstormProjects\MyTodoList" />
       <recent name="C:\Users\Igor Iakovlev\WebstormProjects\MyTodoList\backend\src" />
     </key>
@@ -94,7 +104,8 @@
       <updated>1721678802903</updated>
       <workItem from="1721678803949" duration="21426000" />
       <workItem from="1722280451910" duration="13089000" />
-      <workItem from="1722365119547" duration="3245000" />
+      <workItem from="1722365119547" duration="3771000" />
+      <workItem from="1722427955850" duration="3103000" />
     </task>
     <task id="LOCAL-00001" summary="Create app, connect to mongoDB">
       <option name="closed" value="true" />
@@ -179,6 +190,7 @@
     <MESSAGE value="error handling" />
     <MESSAGE value="PATCH and DELETE" />
     <MESSAGE value="PATCH and DELETE v 1.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="PATCH and DELETE v 1.1" />
+    <MESSAGE value="Connect to backend from frontend" />
+    <option name="LAST_COMMIT_MESSAGE" value="Connect to backend from frontend" />
   </component>
 </project>
