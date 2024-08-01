@@ -5,13 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="365def43-c1c7-40fe-806b-50bbbe702811" name="Changes" comment="Connect to backend from frontend">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/app/App.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/models/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/models/model-todo/model-todo.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/const.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/services/api.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/store/api-actions.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/store/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/store/rootReducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/store/todo-process/todo-process.selectors.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/store/todo-process/todo-process.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/types/type-store.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/types/type-todos.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/app/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,30 +63,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Create__react__app",
-    "last_opened_file_path": "C:/Users/Igor Iakovlev/WebstormProjects/MyTodoList",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.dev.executor": "Run",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "ts.external.directory.path": "C:\\Users\\Igor Iakovlev\\WebstormProjects\\MyTodoList\\frontend\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Create__react__app&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Igor Iakovlev/WebstormProjects/MyTodoList&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.start.executor&quot;: &quot;Debug&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Igor Iakovlev\\WebstormProjects\\MyTodoList\\frontend\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Igor Iakovlev\WebstormProjects\MyTodoList\frontend\public" />
+      <recent name="C:\Users\Igor Iakovlev\WebstormProjects\MyTodoList\frontend\public\css" />
+      <recent name="C:\Users\Igor Iakovlev\WebstormProjects\MyTodoList\frontend" />
       <recent name="C:\Users\Igor Iakovlev\WebstormProjects\MyTodoList\frontend\src\components\app" />
       <recent name="C:\Users\Igor Iakovlev\WebstormProjects\MyTodoList" />
-      <recent name="C:\Users\Igor Iakovlev\WebstormProjects\MyTodoList\backend\src" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/backend/package.json" />
       <command value="run" />
@@ -81,8 +100,19 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/frontend/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start" />
         <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
@@ -105,7 +135,8 @@
       <workItem from="1721678803949" duration="21426000" />
       <workItem from="1722280451910" duration="13089000" />
       <workItem from="1722365119547" duration="3771000" />
-      <workItem from="1722427955850" duration="3103000" />
+      <workItem from="1722427955850" duration="10599000" />
+      <workItem from="1722505880320" duration="2181000" />
     </task>
     <task id="LOCAL-00001" summary="Create app, connect to mongoDB">
       <option name="closed" value="true" />
@@ -171,7 +202,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722366495432</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Connect to backend from frontend">
+      <option name="closed" value="true" />
+      <created>1722431599418</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1722431599418</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

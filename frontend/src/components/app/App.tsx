@@ -1,21 +1,9 @@
-import {useEffect, useState} from 'react';
+import {useSelector} from "react-redux";
+import {selectTodos} from "../../store/todo-process/todo-process.selectors";
 
 function App() {
-  const [todos, setTodos] = useState([]);
 
-  useEffect(() => {
-      async function loadTodo () {
-          try {
-              const response = await fetch('/todos', {method: 'GET'});
-              const todos = await response.json();
-
-              setTodos(todos);
-          } catch (err) {
-              alert(err);
-          }
-      }
-      loadTodo()
-  }, [])
+  const todos = useSelector(selectTodos);
 
   return (
     <div className="App">
