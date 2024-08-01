@@ -16,3 +16,13 @@ export enum Months {
     November = 'Ноябрь',
     December = 'Декабрь'
 }
+
+export enum DayOfWeek {
+    Monday = "MO",
+    Tuesday = "TU",
+    Wednesday = "WE",
+    Thursday = "TH",
+    Friday = "FR",
+    Saturday = "SA",
+    Sunday = "SU",
+}

@@ -6,8 +6,8 @@ body {
 
 .nav {
     background-color: sienna;
-    height: 50px;
     color: whitesmoke;
+    padding: 10px;
 }
 
 .nav-container {
@@ -19,14 +19,53 @@ body {
 }
 
 .dropdown-btn.container {
-    margin: 0 auto;
+    margin: 20px auto 0;
     width: 200px;
-    padding: 10px;
+
  }
 
 #dropdown-autoclose-true {
     background-color: dimgray;
     border: none;
     min-width: 160px;
+    box-shadow: 5px 5px 5px darkgray;
 
+}
+
+.calendar {
+    margin-top: 20px;
+}
+
+.calendar-day-of-week,
+.calendar-day {
+    display: grid;
+    text-align: right;
+    grid-template-columns: repeat(7, 100px);
+    grid-gap: 20px;
+    justify-content: center;
+}
+
+.calendar-day {
+    margin-top: 20px;
+}
+
+.calendar-day-of-week div {
+    color: whitesmoke;
+    background: sienna;
+    font-size: 40px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 5px 5px 7px black;
+    cursor: pointer;
+}
+
+.calendar-day div {
+    font-size: 20px;
+    background: moccasin;
+    border-radius: 10px;
+    text-align: left;
+    padding: 10px 10px 10px 20px;
+    height: 80px;
+    box-shadow: 3px 3px 5px saddlebrown;
+    cursor: pointer;
 }

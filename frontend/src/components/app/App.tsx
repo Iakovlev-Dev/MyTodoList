@@ -1,5 +1,6 @@
 import NavigateBar from "../NavigateBar/NavigateBar";
 import DropdownMonth from "../dropdown-month/dropdown-month";
+import Calendar from "../calendar/calendar";
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
     <div className="App">
         <NavigateBar />
         <DropdownMonth />
+        <Calendar />
     </div>
   );
 }
