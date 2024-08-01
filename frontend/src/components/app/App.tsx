@@ -1,13 +1,14 @@
-import {useSelector} from "react-redux";
-import {selectTodos} from "../../store/todo-process/todo-process.selectors";
+import NavigateBar from "../NavigateBar/NavigateBar";
+import DropdownMonth from "../dropdown-month/dropdown-month";
 
 function App() {
 
-  const todos = useSelector(selectTodos);
+  // const todos = useSelector(selectTodos);
 
   return (
     <div className="App">
-        {JSON.stringify(todos)}
+        <NavigateBar />
+        <DropdownMonth />
     </div>
   );
 }

@@ -1,10 +1,10 @@
-import {TTodo} from "../../types/type-todos";
+import {TTodosArray} from "../../types/type-todos";
 import {createSlice} from "@reduxjs/toolkit";
 import {NameSpace} from "../../const";
 import {fetchTodosAction} from "../api-actions";
 
 export type TTodoInitialState = {
-    todos: TTodo[]
+    todos: TTodosArray
 }
 
 const initialState: TTodoInitialState = {

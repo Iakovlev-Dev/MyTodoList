@@ -4,31 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="365def43-c1c7-40fe-806b-50bbbe702811" name="Changes" comment="Connect to backend from frontend">
-      <change afterPath="$PROJECT_DIR$/frontend/src/const.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/services/api.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/store/api-actions.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/store/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/store/rootReducer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/store/todo-process/todo-process.selectors.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/store/todo-process/todo-process.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/types/type-store.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/types/type-todos.ts" afterDir="false" />
+    <list default="true" id="365def43-c1c7-40fe-806b-50bbbe702811" name="Changes" comment="add redux and connect to localhost">
+      <change afterPath="$PROJECT_DIR$/frontend/public/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/img/bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/NavigateBar/NavigateBar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/dropdown-month/dropdown-month.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/favicon.ico" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/robots.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/app/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/models/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/models/model-todo/model-todo.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/const.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/const.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store/todo-process/todo-process.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/todo-process/todo-process.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/types/type-todos.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/types/type-todos.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +28,8 @@
       <list>
         <option value="JavaScript File" />
         <option value="TypeScript File" />
+        <option value="CSS File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -63,30 +53,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Create__react__app&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Igor Iakovlev/WebstormProjects/MyTodoList&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;npm.start.executor&quot;: &quot;Debug&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Igor Iakovlev\\WebstormProjects\\MyTodoList\\frontend\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Create__react__app",
+    "last_opened_file_path": "C:/Users/Igor Iakovlev/WebstormProjects/MyTodoList/frontend/public/img",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "npm.start.executor": "Debug",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "ts.external.directory.path": "C:\\Users\\Igor Iakovlev\\WebstormProjects\\MyTodoList\\frontend\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Igor Iakovlev\WebstormProjects\MyTodoList\frontend\public\img" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Igor Iakovlev\WebstormProjects\MyTodoList\frontend\public" />
+      <recent name="C:\Users\Igor Iakovlev\WebstormProjects\MyTodoList\frontend\src" />
       <recent name="C:\Users\Igor Iakovlev\WebstormProjects\MyTodoList\frontend\public\css" />
+      <recent name="C:\Users\Igor Iakovlev\WebstormProjects\MyTodoList\frontend\src\components\navbar" />
       <recent name="C:\Users\Igor Iakovlev\WebstormProjects\MyTodoList\frontend" />
-      <recent name="C:\Users\Igor Iakovlev\WebstormProjects\MyTodoList\frontend\src\components\app" />
-      <recent name="C:\Users\Igor Iakovlev\WebstormProjects\MyTodoList" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -136,7 +130,8 @@
       <workItem from="1722280451910" duration="13089000" />
       <workItem from="1722365119547" duration="3771000" />
       <workItem from="1722427955850" duration="10599000" />
-      <workItem from="1722505880320" duration="2181000" />
+      <workItem from="1722505880320" duration="13696000" />
+      <workItem from="1722536886639" duration="666000" />
     </task>
     <task id="LOCAL-00001" summary="Create app, connect to mongoDB">
       <option name="closed" value="true" />
@@ -210,7 +205,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722431599418</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add redux and connect to localhost">
+      <option name="closed" value="true" />
+      <created>1722508807149</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1722508807149</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,6 +233,7 @@
     <MESSAGE value="PATCH and DELETE" />
     <MESSAGE value="PATCH and DELETE v 1.1" />
     <MESSAGE value="Connect to backend from frontend" />
-    <option name="LAST_COMMIT_MESSAGE" value="Connect to backend from frontend" />
+    <MESSAGE value="add redux and connect to localhost" />
+    <option name="LAST_COMMIT_MESSAGE" value="add redux and connect to localhost" />
   </component>
 </project>

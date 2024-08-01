@@ -1,0 +1,32 @@
+body {
+    margin: 0 auto;
+    background-image: url("../img/bg.jpg");
+    min-width: 420px;
+}
+
+.nav {
+    background-color: sienna;
+    height: 50px;
+    color: whitesmoke;
+}
+
+.nav-container {
+    display: flex;
+}
+
+.nav-button {
+    background-color: blanchedalmond;
+}
+
+.dropdown-btn.container {
+    margin: 0 auto;
+    width: 200px;
+    padding: 10px;
+ }
+
+#dropdown-autoclose-true {
+    background-color: dimgray;
+    border: none;
+    min-width: 160px;
+
+}
