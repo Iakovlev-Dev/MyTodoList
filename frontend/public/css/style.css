@@ -18,10 +18,15 @@ body {
     background-color: blanchedalmond;
 }
 
-.dropdown-btn.container {
-    margin: 20px auto 0;
-    width: 200px;
+.dropdown-btn {
 
+}
+
+.dropdown-btn.container {
+    display: flex;
+    margin: 20px auto 0;
+    width: 100%;
+    justify-content: center;
  }
 
 #dropdown-autoclose-true {
@@ -68,4 +73,26 @@ body {
     height: 80px;
     box-shadow: 3px 3px 5px saddlebrown;
     cursor: pointer;
+}
+
+.calendar-day.Monday div:first-child {
+        grid-column: 1;
+}
+.calendar-day.Tuesday div:first-child {
+    grid-column: 2;
+}
+.calendar-day.Wednesday div:first-child {
+    grid-column: 3;
+}
+.calendar-day.Thursday div:first-child {
+    grid-column: 4;
+}
+.calendar-day.Friday div:first-child {
+    grid-column: 5;
+}
+.calendar-day.Saturday div:first-child {
+    grid-column: 6;
+}
+.calendar-day.Sunday div:first-child {
+    grid-column: 7;
 }

@@ -1,8 +1,13 @@
 import {Container} from "react-bootstrap";
-import {DayOfWeek} from "../../const";
+import {DayOfWeek, DayOfWeekNumber} from "../../const";
 
 export default function Calendar () {
     const dayWeek = Object.values(DayOfWeek)
+    // const day = new Date(2024, 7, 1)
+    // const weekday = 1
+
+
+
     return (
         <div className="calendar">
             <Container>
@@ -12,7 +17,7 @@ export default function Calendar () {
                             <div key={index}>{day}</div>
                         ))}
                     </div>
-                    <div className="calendar-day">
+                    <div className={`calendar-day ${DayOfWeekNumber[2]}`}>
                         {Array.from({length: 31}).map((_, index) => (
                             <div key={index}>{index + 1}</div>
                         ))}

@@ -26,3 +26,17 @@ export enum DayOfWeek {
     Saturday = "SA",
     Sunday = "SU",
 }
+
+interface DaysWeek <T> {
+    [key: number]: T
+}
+export const DayOfWeekNumber: DaysWeek<string> = {
+    0: "Sunday",
+    1: "Monday",
+    2: "Tuesday",
+    3: "Wednesday",
+    4: "Thursday",
+    5: "Friday",
+    6: "Saturday",
+
+}
