@@ -1,12 +1,17 @@
 import {Container} from "react-bootstrap";
 import {DayOfWeek, DayOfWeekNumber} from "../../const";
+import {useAppSelector} from "../../store/hooks";
+import {selectMonth, selectYear} from "../../store/todo-process/todo-process.selectors";
+import {getAmountDays, getNumberMonth} from "../../utils";
 
 export default function Calendar () {
     const dayWeek = Object.values(DayOfWeek)
-    // const day = new Date(2024, 7, 1)
-    // const weekday = 1
 
-
+    const currentMonth = useAppSelector(selectMonth)
+    const currentYear = useAppSelector(selectYear)
+    // console.log(getNumberMonth(currentMonth))
+    const day = new Date((+currentYear), getNumberMonth(currentMonth), 1)
+    const weekday = day.getDay()
 
     return (
         <div className="calendar">
@@ -17,8 +22,8 @@ export default function Calendar () {
                             <div key={index}>{day}</div>
                         ))}
                     </div>
-                    <div className={`calendar-day ${DayOfWeekNumber[2]}`}>
-                        {Array.from({length: 31}).map((_, index) => (
+                    <div className={`calendar-day ${DayOfWeekNumber[weekday]}`}>
+                        {Array.from({length: getAmountDays(currentMonth, currentYear)}).map((_, index) => (
                             <div key={index}>{index + 1}</div>
                         ))}
                     </div>

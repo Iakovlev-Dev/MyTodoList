@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="365def43-c1c7-40fe-806b-50bbbe702811" name="Changes" comment="add calendar">
+    <list default="true" id="365def43-c1c7-40fe-806b-50bbbe702811" name="Changes" comment="refactor code and add year">
+      <change afterPath="$PROJECT_DIR$/frontend/src/store/hooks.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/utils.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/calendar/calendar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/calendar/calendar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/dropdown-month/dropdown-month.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/dropdown-month/dropdown-month.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/const.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/const.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store/todo-process/todo-process.selectors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/todo-process/todo-process.selectors.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store/todo-process/todo-process.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/todo-process/todo-process.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,9 +23,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="TypeScript File" />
         <option value="CSS File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -124,7 +127,7 @@
       <workItem from="1722365119547" duration="3771000" />
       <workItem from="1722427955850" duration="10599000" />
       <workItem from="1722505880320" duration="13696000" />
-      <workItem from="1722536886639" duration="8915000" />
+      <workItem from="1722536886639" duration="14420000" />
     </task>
     <task id="LOCAL-00001" summary="Create app, connect to mongoDB">
       <option name="closed" value="true" />
@@ -222,7 +225,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722541867813</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="refactor code and add year">
+      <option name="closed" value="true" />
+      <created>1722603221319</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1722603221319</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,6 +256,7 @@
     <MESSAGE value="add redux and connect to localhost" />
     <MESSAGE value="add nav bar and drop menu" />
     <MESSAGE value="add calendar" />
-    <option name="LAST_COMMIT_MESSAGE" value="add calendar" />
+    <MESSAGE value="refactor code and add year" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor code and add year" />
   </component>
 </project>
