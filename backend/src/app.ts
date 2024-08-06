@@ -2,6 +2,7 @@ import express, {Response, Request, NextFunction} from "express"
 import 'dotenv/config'
 import todosRoutes from './routes/todoList_routes'
 import morgan from 'morgan'
+import cors from 'cors'
 import createHttpError, {isHttpError} from "http-errors";
 
 const app = express() //Подключаем фреймворк express
@@ -9,6 +10,8 @@ const app = express() //Подключаем фреймворк express
 app.use(express.json())//Разбирает входящие данные на JSON объекты
 
 app.use(morgan('dev'))
+
+app.use(cors())
 
 app.use('/todos', todosRoutes)
 
@@ -28,5 +31,12 @@ app.use((err: unknown, _req: Request, res: Response, next: NextFunction) => {
     }
     res.status(statusCode).json({error: errMessage})
 })
+
+const corsOptions = {
+    origin: 'https://localhost:5000',
+    optionSuccessStatus: 200, // для старых браузеров и SmartTV
+}
+
+app.get('todos', cors(corsOptions))
 
 export default app

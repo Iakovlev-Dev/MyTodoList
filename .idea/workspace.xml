@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="365def43-c1c7-40fe-806b-50bbbe702811" name="Changes" comment="PATCH and DELETE v 1.1" />
+    <list default="true" id="365def43-c1c7-40fe-806b-50bbbe702811" name="Changes" comment="add modal-window">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/controllers/controllers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controllers/controllers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/models/todo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/models/todo.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/types/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/types/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/app/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/modal-window/modal-window.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/modal-window/modal-window.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/types/type-todos.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/types/type-todos.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +23,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="CSS File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -38,29 +49,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Create__react__app",
-    "last_opened_file_path": "C:/Users/Igor Iakovlev/WebstormProjects/MyTodoList",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.dev.executor": "Run",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "ts.external.directory.path": "C:\\Users\\Igor Iakovlev\\WebstormProjects\\MyTodoList\\frontend\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Create__react__app&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Igor Iakovlev/WebstormProjects/MyTodoList/frontend/public/img&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.start.executor&quot;: &quot;Debug&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Igor Iakovlev\\WebstormProjects\\MyTodoList\\frontend\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Igor Iakovlev\WebstormProjects\MyTodoList\frontend\public\img" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Igor Iakovlev\WebstormProjects\MyTodoList" />
-      <recent name="C:\Users\Igor Iakovlev\WebstormProjects\MyTodoList\backend\src" />
+      <recent name="C:\Users\Igor Iakovlev\WebstormProjects\MyTodoList\frontend\public" />
+      <recent name="C:\Users\Igor Iakovlev\WebstormProjects\MyTodoList\frontend\src" />
+      <recent name="C:\Users\Igor Iakovlev\WebstormProjects\MyTodoList\frontend\public\css" />
+      <recent name="C:\Users\Igor Iakovlev\WebstormProjects\MyTodoList\frontend\src\components\navbar" />
+      <recent name="C:\Users\Igor Iakovlev\WebstormProjects\MyTodoList\frontend" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/backend/package.json" />
       <command value="run" />
@@ -71,8 +90,19 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/frontend/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start" />
         <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
@@ -94,7 +124,13 @@
       <updated>1721678802903</updated>
       <workItem from="1721678803949" duration="21426000" />
       <workItem from="1722280451910" duration="13089000" />
-      <workItem from="1722365119547" duration="3245000" />
+      <workItem from="1722365119547" duration="3771000" />
+      <workItem from="1722427955850" duration="10599000" />
+      <workItem from="1722505880320" duration="13696000" />
+      <workItem from="1722536886639" duration="20171000" />
+      <workItem from="1722624181018" duration="299000" />
+      <workItem from="1722948815244" duration="6401000" />
+      <workItem from="1722969453856" duration="5348000" />
     </task>
     <task id="LOCAL-00001" summary="Create app, connect to mongoDB">
       <option name="closed" value="true" />
@@ -160,7 +196,63 @@
       <option name="project" value="LOCAL" />
       <updated>1722366495432</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Connect to backend from frontend">
+      <option name="closed" value="true" />
+      <created>1722431599418</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1722431599418</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add redux and connect to localhost">
+      <option name="closed" value="true" />
+      <created>1722508807149</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1722508807149</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add nav bar and drop menu">
+      <option name="closed" value="true" />
+      <created>1722538143951</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1722538143951</updated>
+    </task>
+    <task id="LOCAL-00012" summary="add calendar">
+      <option name="closed" value="true" />
+      <created>1722541867813</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1722541867813</updated>
+    </task>
+    <task id="LOCAL-00013" summary="refactor code and add year">
+      <option name="closed" value="true" />
+      <created>1722603221319</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1722603221319</updated>
+    </task>
+    <task id="LOCAL-00014" summary="change days when select month">
+      <option name="closed" value="true" />
+      <created>1722609613098</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1722609613098</updated>
+    </task>
+    <task id="LOCAL-00015" summary="add modal-window">
+      <option name="closed" value="true" />
+      <created>1722956729767</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1722956729767</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +271,13 @@
     <MESSAGE value="error handling" />
     <MESSAGE value="PATCH and DELETE" />
     <MESSAGE value="PATCH and DELETE v 1.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="PATCH and DELETE v 1.1" />
+    <MESSAGE value="Connect to backend from frontend" />
+    <MESSAGE value="add redux and connect to localhost" />
+    <MESSAGE value="add nav bar and drop menu" />
+    <MESSAGE value="add calendar" />
+    <MESSAGE value="refactor code and add year" />
+    <MESSAGE value="change days when select month" />
+    <MESSAGE value="add modal-window" />
+    <option name="LAST_COMMIT_MESSAGE" value="add modal-window" />
   </component>
 </project>

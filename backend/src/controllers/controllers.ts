@@ -32,12 +32,15 @@ export const getTodoById:RequestHandler = async (req, res, next) => {
 
 export const createTodo:RequestHandler<unknown, unknown, CreateTodoBody, unknown> = async (req, res, next) => {
     const text = req.body.text
+    const todoDate = req.body.todoDate
+
     try{
         if(!text) {
             throw createHttpError(400, "Todo must have text!")
         }
         const newTodo = await todoModel.create({
             text: text,
+            todoDate: todoDate
         })
         res.status(201).json(newTodo)
     } catch (err) {
