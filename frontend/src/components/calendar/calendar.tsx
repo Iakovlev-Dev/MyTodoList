@@ -1,10 +1,17 @@
 import {Container} from "react-bootstrap";
 import {DayOfWeek, DayOfWeekNumber} from "../../const";
-import {useAppSelector} from "../../store/hooks";
+import {useAppDispatch, useAppSelector} from "../../store/hooks";
 import {selectMonth, selectYear} from "../../store/todo-process/todo-process.selectors";
 import {getAmountDays, getNumberMonth} from "../../utils";
+import {setDay} from "../../store/todo-process/todo-process";
 
-export default function Calendar () {
+type TCalendar = {
+
+    onClose: () => void
+}
+
+export default function Calendar ({ onClose}: TCalendar) {
+    const dispatch = useAppDispatch();
     const dayWeek = Object.values(DayOfWeek)
 
     const currentMonth = useAppSelector(selectMonth)
@@ -12,6 +19,11 @@ export default function Calendar () {
     // console.log(getNumberMonth(currentMonth))
     const day = new Date((+currentYear), getNumberMonth(currentMonth), 1)
     const weekday = day.getDay()
+
+    const handleOpenModalClick = (index: number) => {
+        onClose()
+        dispatch(setDay(index.toString()))
+    }
 
     return (
         <div className="calendar">
@@ -24,7 +36,12 @@ export default function Calendar () {
                     </div>
                     <div className={`calendar-day ${DayOfWeekNumber[weekday]}`}>
                         {Array.from({length: getAmountDays(currentMonth, currentYear)}).map((_, index) => (
-                            <div key={index}>{index + 1}</div>
+                            <div
+                                key={index}
+                                onClick={() => handleOpenModalClick(index + 1)}
+                            >
+                                {index + 1}
+                            </div>
                         ))}
                     </div>
                 </div>

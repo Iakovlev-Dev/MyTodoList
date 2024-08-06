@@ -25,13 +25,13 @@ export function getAmountDays (month: string | null, year: string) {
     }
 }
 
-export function getDate (day: string, month: string): string {
+export function getDate (day: string, month: string, year: string): string {
     if (month === Months.March || month === Months.August) {
         month = month + 'а'
     } else {
         month = month.slice(0, -1) + 'я'
     }
-    return day + ' ' + month
+    return day + ' ' + month + ' ' + year
 }
 
 export const getNumberMonth = (month: string) => {

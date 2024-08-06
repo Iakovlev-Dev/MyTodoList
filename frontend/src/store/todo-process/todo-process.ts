@@ -8,13 +8,15 @@ export type TTodoInitialState = {
     year: string,
     month: string,
     day: string,
+
 }
 
 const initialState: TTodoInitialState = {
     todos: [],
     year: '2024',
-    month: '',
-    day: ''
+    month: 'Январь',
+    day: '',
+
 }
 
 export const todosProcess = createSlice({
@@ -26,7 +28,11 @@ export const todosProcess = createSlice({
         },
         setYear: (state, action: PayloadAction<string>) => {
             state.year = action.payload
-        }
+        },
+        setDay: (state, action: PayloadAction<string>) => {
+            state.day = action.payload
+        },
+
     },
     extraReducers (builder) {
         builder
@@ -36,4 +42,4 @@ export const todosProcess = createSlice({
     }
 })
 
-export const {setMonth, setYear} = todosProcess.actions
+export const {setMonth, setYear, setDay} = todosProcess.actions
