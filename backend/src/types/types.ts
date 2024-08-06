@@ -1,9 +1,11 @@
 export type CreateTodoBody = {
     text?: string;
+    todoDate?: string;
 }
 
 export type UpdateTodoBody = {
-    text?: string
+    text?: string;
+    todoDate?: string;
 }
 
 export type UpdateParams = {

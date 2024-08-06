@@ -122,5 +122,35 @@ body {
     top: 150px;
     background: url("../img/bg-card.jpg") no-repeat center ;
 }
+.task-list {
+
+    justify-content: space-between;
+    max-width: 320px;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-buttons {
+    display: flex;
+    justify-content: space-between;
+    min-width: 40px;
+}
+
+.edit {
+    width: 16px;
+    height: 16px;
+    background: url("../img/edit.png") no-repeat center center / contain;
+    cursor: pointer;
+}
+
+.delete {
+    width: 16px;
+    height: 16px;
+    background: url("../img/delete.png") no-repeat center center / contain;
+    cursor: pointer;
+}
 
 

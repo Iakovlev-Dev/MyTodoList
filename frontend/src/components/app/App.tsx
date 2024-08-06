@@ -2,7 +2,7 @@ import NavigateBar from "../NavigateBar/NavigateBar";
 import DropdownMonth from "../dropdown-month/dropdown-month";
 import Calendar from "../calendar/calendar";
 import ModalWindow from "../modal-window/modal-window";
-import React, {MouseEventHandler, useState} from "react";
+import React, {useState} from "react";
 
 
 function App() {
