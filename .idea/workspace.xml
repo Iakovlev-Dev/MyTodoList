@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="365def43-c1c7-40fe-806b-50bbbe702811" name="Changes" comment="add modal-window">
+    <list default="true" id="365def43-c1c7-40fe-806b-50bbbe702811" name="Changes" comment="connect to dataBase and display todosList">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/controllers/controllers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controllers/controllers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/models/todo.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/models/todo.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/types/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/types/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/app/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/modal-window/modal-window.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/modal-window/modal-window.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store/api-actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/api-actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store/todo-process/todo-process.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/todo-process/todo-process.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/types/type-todos.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/types/type-todos.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -130,7 +128,9 @@
       <workItem from="1722536886639" duration="20171000" />
       <workItem from="1722624181018" duration="299000" />
       <workItem from="1722948815244" duration="6401000" />
-      <workItem from="1722969453856" duration="5348000" />
+      <workItem from="1722969453856" duration="5575000" />
+      <workItem from="1723031753870" duration="6145000" />
+      <workItem from="1723056529447" duration="4785000" />
     </task>
     <task id="LOCAL-00001" summary="Create app, connect to mongoDB">
       <option name="closed" value="true" />
@@ -252,7 +252,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722956729767</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="connect to dataBase and display todosList">
+      <option name="closed" value="true" />
+      <created>1722975256994</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1722975256994</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,6 +286,7 @@
     <MESSAGE value="refactor code and add year" />
     <MESSAGE value="change days when select month" />
     <MESSAGE value="add modal-window" />
-    <option name="LAST_COMMIT_MESSAGE" value="add modal-window" />
+    <MESSAGE value="connect to dataBase and display todosList" />
+    <option name="LAST_COMMIT_MESSAGE" value="connect to dataBase and display todosList" />
   </component>
 </project>

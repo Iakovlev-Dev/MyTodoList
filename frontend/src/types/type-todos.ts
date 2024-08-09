@@ -6,4 +6,9 @@ export type TTodo = {
     updatedAt: string;
 }
 
+export type TTodoPost = {
+    text: string;
+    todoDate: string;
+}
+
 export type TTodosArray = TTodo[]

@@ -14,7 +14,7 @@ export type TTodoInitialState = {
 const initialState: TTodoInitialState = {
     todos: [],
     year: '2024',
-    month: 'Январь',
+    month: 'Июль',
     day: '',
 
 }
