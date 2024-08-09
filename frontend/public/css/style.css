@@ -108,7 +108,11 @@ body {
     cursor: pointer;
 }
 
-
+.modal-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 .modal.show {
     display: block;
@@ -136,7 +140,9 @@ body {
 .task-buttons {
     display: flex;
     justify-content: space-between;
-    min-width: 40px;
+    min-width: 60px;
+    height: 100%;
+    padding-right: 20px;
 }
 
 .edit {

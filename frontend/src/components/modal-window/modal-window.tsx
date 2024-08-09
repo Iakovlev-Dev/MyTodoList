@@ -1,16 +1,19 @@
-import React from "react";
-import {Button, Modal} from "react-bootstrap";
-import {useAppSelector} from "../../store/hooks";
+import React, {ChangeEvent, FormEvent, useState} from "react";
+import {Modal} from "react-bootstrap";
+import {useAppDispatch, useAppSelector} from "../../store/hooks";
 import {selectDay, selectMonth, selectTodos, selectYear} from "../../store/todo-process/todo-process.selectors";
 import {getDate, getNumberMonth} from "../../utils";
-import dayjs from 'dayjs'
+
 import {TTodo} from "../../types/type-todos";
+import {deleteTodoAction, fetchTodosAction, postTodoAction} from "../../store/api-actions";
 
 type TModalWindow = {
     onClose: () => void
 }
 
 export default function ModalWindow ({onClose}: TModalWindow) {
+    const [todo, setTodo] = useState('')
+    const dispatch = useAppDispatch()
     const todoList = useAppSelector(selectTodos)
 
     const currentDay = useAppSelector(selectDay)
@@ -24,9 +27,28 @@ export default function ModalWindow ({onClose}: TModalWindow) {
         return current.todoDate === same
     }
 
-    const sameDate = currentDay + '-' + (getNumberMonth(currentMonth)+1).toString() + '-' + currentYear
-    const currentTodosList = todoList.filter((item) =>  isTodosDate(item, sameDate))
-    console.log(sameDate)
+    const todoDate = currentDay + '-' + (getNumberMonth(currentMonth)+1).toString() + '-' + currentYear
+    const currentTodosList = todoList.filter((item) =>  isTodosDate(item, todoDate))
+
+    const handleFormSummit = (evt: FormEvent<HTMLFormElement>) => {
+        evt.preventDefault()
+        dispatch(fetchTodosAction())
+        if (todo !== 'undefined') {
+            const text = todo
+            dispatch(postTodoAction({text, todoDate}))
+        }
+
+        setTodo('')
+    }
+
+    const handleChangeTodo = (evt: ChangeEvent<HTMLTextAreaElement>) => {
+        setTodo(evt.target.value)
+    }
+
+    const handleDeleteTodo = (id: string) => {
+        dispatch(deleteTodoAction({id}))
+    }
+
 
     return (
         <div
@@ -47,13 +69,21 @@ export default function ModalWindow ({onClose}: TModalWindow) {
                                 </div>
                                 <div className="task-buttons">
                                     <div className="edit"/>
-                                    <div className="delete"/>
+                                    <div className="delete" onClick={() => handleDeleteTodo(item._id)}/>
                                 </div>
                             </div>
                         ))}
                     </ul>
 
+                    <form method="post" onSubmit={handleFormSummit}>
+                        <textarea
+                            placeholder="Введи задачу"
+                            value={todo}
+                            onChange={handleChangeTodo}
+                        />
+                        <button type="submit">Отправить</button>
 
+                    </form>
                 </Modal.Body>
 
             </Modal.Dialog>
