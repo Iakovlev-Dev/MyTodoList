@@ -1,7 +1,6 @@
 import {Container, Dropdown} from "react-bootstrap";
 import {Months} from "../../const";
 import {selectMonth, selectYear} from "../../store/todo-process/todo-process.selectors";
-import {useDispatch, useSelector} from "react-redux";
 import {useAppDispatch, useAppSelector} from "../../store/hooks";
 import {setMonth, setYear} from "../../store/todo-process/todo-process";
 

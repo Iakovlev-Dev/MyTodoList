@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="365def43-c1c7-40fe-806b-50bbbe702811" name="Changes" comment="connect to dataBase and display todosList">
+    <list default="true" id="365def43-c1c7-40fe-806b-50bbbe702811" name="Changes" comment="add delete todos">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/app/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/dropdown-month/dropdown-month.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/dropdown-month/dropdown-month.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/modal-window/modal-window.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/modal-window/modal-window.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store/api-actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/api-actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store/todo-process/todo-process.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/todo-process/todo-process.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/types/type-todos.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/types/type-todos.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +29,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Error_handling" />
+        <entry key="$PROJECT_DIR$" value="Create_react_app" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -50,7 +49,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Create__react__app&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;API__actions&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Igor Iakovlev/WebstormProjects/MyTodoList/frontend/public/img&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -131,6 +130,7 @@
       <workItem from="1722969453856" duration="5575000" />
       <workItem from="1723031753870" duration="6145000" />
       <workItem from="1723056529447" duration="4785000" />
+      <workItem from="1723212874322" duration="2859000" />
     </task>
     <task id="LOCAL-00001" summary="Create app, connect to mongoDB">
       <option name="closed" value="true" />
@@ -260,7 +260,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722975256994</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="add delete todos">
+      <option name="closed" value="true" />
+      <created>1723212910404</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1723212910404</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,6 +295,7 @@
     <MESSAGE value="change days when select month" />
     <MESSAGE value="add modal-window" />
     <MESSAGE value="connect to dataBase and display todosList" />
-    <option name="LAST_COMMIT_MESSAGE" value="connect to dataBase and display todosList" />
+    <MESSAGE value="add delete todos" />
+    <option name="LAST_COMMIT_MESSAGE" value="add delete todos" />
   </component>
 </project>

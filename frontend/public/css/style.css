@@ -159,4 +159,21 @@ body {
     cursor: pointer;
 }
 
+.modal-window_form {
+    display: flex;
+    justify-content: space-between;
+}
 
+.modal-window_form_textarea {
+    width: 100%;
+    margin: 10px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.modal-window_form_button {
+    margin: 10px;
+    border-radius: 5px;
+    background: moccasin;
+    box-shadow: 5px 5px 5px darkgray;
+}
