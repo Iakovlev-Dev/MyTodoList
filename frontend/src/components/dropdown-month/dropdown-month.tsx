@@ -41,6 +41,7 @@ export default function  DropdownMonth() {
                     {currentYear === '' ? 'Выбери год' : currentYear}
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
+
                     <Dropdown.Item href="#" onClick={() => handleYearClick('2024')}>2024</Dropdown.Item>
                     <Dropdown.Item href="#" onClick={() => handleYearClick('2025')}>2025</Dropdown.Item>
                     <Dropdown.Item href="#" onClick={() => handleYearClick('2025')}>2025</Dropdown.Item>
