@@ -43,6 +43,7 @@ export default function  DropdownMonth() {
                 <Dropdown.Menu>
                     <Dropdown.Item href="#" onClick={() => handleYearClick('2024')}>2024</Dropdown.Item>
                     <Dropdown.Item href="#" onClick={() => handleYearClick('2025')}>2025</Dropdown.Item>
+                    <Dropdown.Item href="#" onClick={() => handleYearClick('2025')}>2025</Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
         </Container>
