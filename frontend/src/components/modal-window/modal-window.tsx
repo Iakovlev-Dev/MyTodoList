@@ -75,14 +75,14 @@ export default function ModalWindow ({onClose}: TModalWindow) {
                         ))}
                     </ul>
 
-                    <form method="post" onSubmit={handleFormSummit}>
+                    <form method="post" onSubmit={handleFormSummit} className="modal-window_form">
                         <textarea
                             placeholder="Введи задачу"
                             value={todo}
                             onChange={handleChangeTodo}
+                            className="modal-window_form_textarea"
                         />
-                        <button type="submit">Отправить</button>
-
+                        <button type="submit" className="modal-window_form_button">Добавить</button>
                     </form>
                 </Modal.Body>
 

@@ -1,7 +1,6 @@
 import {Container, Dropdown} from "react-bootstrap";
 import {Months} from "../../const";
 import {selectMonth, selectYear} from "../../store/todo-process/todo-process.selectors";
-import {useDispatch, useSelector} from "react-redux";
 import {useAppDispatch, useAppSelector} from "../../store/hooks";
 import {setMonth, setYear} from "../../store/todo-process/todo-process";
 
@@ -42,7 +41,9 @@ export default function  DropdownMonth() {
                     {currentYear === '' ? 'Выбери год' : currentYear}
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
+
                     <Dropdown.Item href="#" onClick={() => handleYearClick('2024')}>2024</Dropdown.Item>
+                    <Dropdown.Item href="#" onClick={() => handleYearClick('2025')}>2025</Dropdown.Item>
                     <Dropdown.Item href="#" onClick={() => handleYearClick('2025')}>2025</Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>

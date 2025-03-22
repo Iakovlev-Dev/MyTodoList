@@ -11,7 +11,6 @@ function App() {
     const handleCloseModal = () => {
         setIsModalOpen(!isModalOpen)
     }
-  // const todos = useSelector(selectTodos);
 
   return (
     <div className="App">
