@@ -3,12 +3,23 @@ import {Months} from "../../const";
 import {selectMonth, selectYear} from "../../store/todo-process/todo-process.selectors";
 import {useAppDispatch, useAppSelector} from "../../store/hooks";
 import {setMonth, setYear} from "../../store/todo-process/todo-process";
+import dayjs from "dayjs";
+import {useEffect} from "react";
 
 export default function  DropdownMonth() {
     const dispatch = useAppDispatch()
     const newArrFromMonths = Object.entries(Months)
     const currentMonth = useAppSelector(selectMonth)
     const currentYear = useAppSelector(selectYear)
+
+    useEffect(() => {
+        const todayMonth = dayjs().month()
+        const monthRu = newArrFromMonths[todayMonth][1]
+        const todayYear = dayjs().year().toString()
+
+        dispatch(setYear(todayYear))
+        dispatch(setMonth(monthRu))
+    }, [dispatch, newArrFromMonths]);
 
     const handleMonthClick = (month: string) => {
         dispatch(setMonth(month))
@@ -41,10 +52,9 @@ export default function  DropdownMonth() {
                     {currentYear === '' ? 'Выбери год' : currentYear}
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
-
                     <Dropdown.Item href="#" onClick={() => handleYearClick('2024')}>2024</Dropdown.Item>
                     <Dropdown.Item href="#" onClick={() => handleYearClick('2025')}>2025</Dropdown.Item>
-                    <Dropdown.Item href="#" onClick={() => handleYearClick('2025')}>2025</Dropdown.Item>
+                    <Dropdown.Item href="#" onClick={() => handleYearClick('2025')}>2026</Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
         </Container>
