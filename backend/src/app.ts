@@ -1,42 +1,63 @@
-import express, {Response, Request, NextFunction} from "express"
-import 'dotenv/config'
-import todosRoutes from './routes/todoList_routes'
-import morgan from 'morgan'
-import cors from 'cors'
-import createHttpError, {isHttpError} from "http-errors";
+import express from "express";
+import { pool } from './config/db';
+import cors from 'cors';
+import {QueryResult} from "pg";
 
-const app = express() //Подключаем фреймворк express
 
-app.use(express.json())//Разбирает входящие данные на JSON объекты
+const app = express();
 
-app.use(morgan('dev'))
-
+app.use(express.json());
 app.use(cors())
 
-app.use('/todos', todosRoutes)
 
-app.use((req, res, next) => {
-    next(createHttpError(404, "Endpoint not found"))
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 })
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-app.use((err: unknown, _req: Request, res: Response, next: NextFunction) => {
-    console.error(err)
-    let errMessage = 'An unknown error occurred'
-    let statusCode = 500
+app.post('/postData', (req, res) => {
+    const {text, date} = req.body;
 
-    if(isHttpError(err)) {
-        statusCode = err.status
-        errMessage = err.message
-    }
-    res.status(statusCode).json({error: errMessage})
+    const insertQuery = "INSERT INTO todolist (text, date) VALUES ($1, $2)"
+
+    pool.query(insertQuery, [ text, date], (err: Error | null, result: QueryResult | null) => {
+        if (err) {
+            console.log(err.message)
+            res.send(err)
+        } else {
+            console.log(result)
+            res.send("Posted Data")
+        }
+    })
 })
 
-const corsOptions = {
-    origin: 'https://localhost:5000',
-    optionSuccessStatus: 200, // для старых браузеров и SmartTV
-}
+app.get('/', (req, res) => {
+    const fetchQuery = 'SELECT * FROM todolist'
 
-app.get('todos', cors(corsOptions))
+    pool.query(fetchQuery, (err: Error | null, result: QueryResult | null) => {
+        if (err) {
+            res.send(err)
+        } else {
+            res.send(result?.rows)
+        }
+    })
+})
 
-export default app
+app.delete('/delete/:id', (req, res) => {
+    const { id } = req.params
+    const deleteQuery = 'DELETE FROM todolist WHERE id = $1 RETURNING *'
+
+    pool.query(deleteQuery, [id], (err, result) => {
+        if (err) {
+            console.error(err.message);
+            return res.status(500).json({ error: err.message });
+        } else {
+            console.log(result)
+            res.send("Deleted Data")
+        }
+    })
+})
+
+

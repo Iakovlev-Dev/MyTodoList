@@ -24,18 +24,21 @@ export default function ModalWindow ({onClose}: TModalWindow) {
 
 
     const isTodosDate = (current: TTodo, same: string) => {
-        return current.todoDate === same
+        return current.date === same
     }
 
-    const todoDate = currentDay + '-' + (getNumberMonth(currentMonth)+1).toString() + '-' + currentYear
+    const todoDate = currentYear + '-' + (getNumberMonth(currentMonth)+1).toString() + '-' + currentDay
     const currentTodosList = todoList.filter((item) =>  isTodosDate(item, todoDate))
 
     const handleFormSummit = (evt: FormEvent<HTMLFormElement>) => {
         evt.preventDefault()
         dispatch(fetchTodosAction())
+
+        const date = todoDate
+
         if (todo !== 'undefined') {
             const text = todo
-            dispatch(postTodoAction({text, todoDate}))
+            dispatch(postTodoAction({text, date}))
         }
 
         setTodo('')
@@ -48,7 +51,6 @@ export default function ModalWindow ({onClose}: TModalWindow) {
     const handleDeleteTodo = (id: string) => {
         dispatch(deleteTodoAction({id}))
     }
-
 
     return (
         <div
@@ -69,7 +71,7 @@ export default function ModalWindow ({onClose}: TModalWindow) {
                                 </div>
                                 <div className="task-buttons">
                                     <div className="edit"/>
-                                    <div className="delete" onClick={() => handleDeleteTodo(item._id)}/>
+                                    <div className="delete" onClick={() => handleDeleteTodo(item.id)}/>
                                 </div>
                             </div>
                         ))}

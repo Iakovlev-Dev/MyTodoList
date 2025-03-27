@@ -4,18 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="365def43-c1c7-40fe-806b-50bbbe702811" name="Changes" comment="feat: добавляет еще один год в выпадающем меню fix">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+    <list default="true" id="365def43-c1c7-40fe-806b-50bbbe702811" name="Changes" comment="feat: Переходит на PostGreSQL">
+      <change afterPath="$PROJECT_DIR$/backend/src/config/db.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/dropdown-month/dropdown-month.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/dropdown-month/dropdown-month.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store/todo-process/todo-process.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/todo-process/todo-process.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/controllers/controllers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controllers/controllers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/models/todo.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/routes/todoList_routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/routes/todoList_routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/types/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/types/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/calendar/calendar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/calendar/calendar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/modal-window/modal-window.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/modal-window/modal-window.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/services/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/services/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store/api-actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/api-actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/types/type-todos.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/types/type-todos.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,41 +56,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "newServer",
-    "ignore.virus.scanning.warn.message": "true",
-    "javascript.nodejs.core.library.configured.version": "18.17.1",
-    "javascript.nodejs.core.library.typings.version": "18.17.19",
-    "last_opened_file_path": "C:/Users/Igor Iakovlev/WebstormProjects/MyTodoList/frontend/public/img",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.dev (1).executor": "Run",
-    "npm.dev.executor": "Run",
-    "npm.start.executor": "Debug",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "ts.external.directory.path": "C:\\Users\\Igor Iakovlev\\WebstormProjects\\MyTodoList\\frontend\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;newServer&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.17.1&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.17.19&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Igor Iakovlev/WebstormProjects/MyTodoList/frontend/public/img&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev (1).executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.start.executor&quot;: &quot;Debug&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Igor Iakovlev\\WebstormProjects\\MyTodoList\\frontend\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Igor Iakovlev\WebstormProjects\MyTodoList\frontend\public\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Igor Iakovlev\WebstormProjects\MyTodoList\backend\src\config" />
       <recent name="C:\Users\Igor Iakovlev\WebstormProjects\MyTodoList\frontend\public" />
       <recent name="C:\Users\Igor Iakovlev\WebstormProjects\MyTodoList\frontend\src" />
       <recent name="C:\Users\Igor Iakovlev\WebstormProjects\MyTodoList\frontend\public\css" />
       <recent name="C:\Users\Igor Iakovlev\WebstormProjects\MyTodoList\frontend\src\components\navbar" />
-      <recent name="C:\Users\Igor Iakovlev\WebstormProjects\MyTodoList\frontend" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev (1)">
@@ -168,7 +172,9 @@
       <workItem from="1723056529447" duration="4785000" />
       <workItem from="1742712361982" duration="5852000" />
       <workItem from="1742988655015" duration="1996000" />
-      <workItem from="1742990706220" duration="1110000" />
+      <workItem from="1742990706220" duration="2844000" />
+      <workItem from="1743014197235" duration="5425000" />
+      <workItem from="1743069007308" duration="12186000" />
     </task>
     <task id="LOCAL-00001" summary="Create app, connect to mongoDB">
       <option name="closed" value="true" />
@@ -306,7 +312,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742628143586</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="feat: Переходит на PostGreSQL">
+      <option name="closed" value="true" />
+      <created>1742992123612</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1742992123612</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,7 +349,8 @@
     <MESSAGE value="add modal-window" />
     <MESSAGE value="connect to dataBase and display todosList" />
     <MESSAGE value="feat: добавляет еще один год в выпадающем меню fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: добавляет еще один год в выпадающем меню fix" />
+    <MESSAGE value="feat: Переходит на PostGreSQL" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Переходит на PostGreSQL" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

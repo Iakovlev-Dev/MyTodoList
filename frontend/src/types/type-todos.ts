@@ -1,9 +1,8 @@
 export type TTodo = {
-    _id: string;
+    id: string;
     text: string;
-    todoDate: string;
-    createdAt: string;
-    updatedAt: string;
+    date: string;
+
 }
 
 export type TTodoPost = {

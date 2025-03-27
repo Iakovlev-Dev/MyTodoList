@@ -1,7 +1,7 @@
 import {Container} from "react-bootstrap";
 import {DayOfWeek, DayOfWeekNumber} from "../../const";
 import {useAppDispatch, useAppSelector} from "../../store/hooks";
-import {selectMonth, selectYear} from "../../store/todo-process/todo-process.selectors";
+import {selectDay, selectMonth, selectYear} from "../../store/todo-process/todo-process.selectors";
 import {getAmountDays, getNumberMonth} from "../../utils";
 import {setDay} from "../../store/todo-process/todo-process";
 
@@ -19,6 +19,7 @@ export default function Calendar ({ onClose}: TCalendar) {
     // console.log(getNumberMonth(currentMonth))
     const day = new Date((+currentYear), getNumberMonth(currentMonth), 1)
     const weekday = day.getDay()
+
 
     const handleOpenModalClick = (index: number) => {
         onClose()
